@@ -1,0 +1,6 @@
+[submodule "github.com/lemanschik/awesome"]
+	path = github.com/lemanschik/awesome
+	url = git@github.com:lemanschik/awesome.git
+[submodule "github.com/unlicense-code/awesome"]
+	path = github.com/unlicense-code/awesome
+	url = git@github.com:unlicense-code/awesome.git

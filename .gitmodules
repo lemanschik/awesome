@@ -4,3 +4,6 @@
 [submodule "github.com/unlicense-code/awesome"]
 	path = github.com/unlicense-code/awesome
 	url = git@github.com:unlicense-code/awesome.git
+[submodule "github.com/unlicense-code/awesome-b8g"]
+	path = github.com/unlicense-code/awesome-b8g
+	url = git@github.com:unlicense-code/awesome-b8g.git

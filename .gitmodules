@@ -1,0 +1,3 @@
+[submodule "github.com/component-manager/cloud"]
+	path = github.com/component-manager/cloud
+	url = git@github.com:component-manager/cloud.git

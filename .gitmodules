@@ -1,0 +1,3 @@
+[submodule "packages/mpeg/deps/jsmpeg"]
+	path = packages/mpeg/deps/jsmpeg
+	url = git@github.com:phoboslab/jsmpeg.git

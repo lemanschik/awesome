@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/stealify/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/coder/vscode-coder
+	branch = main
+	commit = 9b936cd8ecbb27e2d15c1807096a0df28d0a0ca0
+	parent = be366da82a777c54b89403fc11ded8ea4e80b42c
+	method = merge
+	cmdver = 0a31831

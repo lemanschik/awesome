@@ -1,0 +1,15 @@
+pool:
+  vmImage: "ubuntu-latest"
+
+trigger:
+  branches:
+    include: ["main", "release/*"]
+pr: none
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "16.x"
+  - template: ./distro/download-distro.yml
+  - script: node build/azure-pipelines/distro/apply-cli-patches
+    displayName: Apply distro patches

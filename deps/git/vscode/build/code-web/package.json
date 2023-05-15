@@ -1,0 +1,26 @@
+{
+  "name": "vscode-web",
+  "version": "1.78.1",
+  "description": "Visual Studio Code for browser",
+  "files": ["dist"],
+  "scripts": {
+    "build": "node build.js",
+    "prepare-demo": "node prepare-demo.js",
+    "demo": "node ./demo/http.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Felx-B/vscode-web.git"
+  },
+  "author": "Felix B",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Felx-B/vscode-web/issues"
+  },
+  "homepage": "https://github.com/Felx-B/vscode-web#readme",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "fs-extra": "^9.0.1"
+  },
+  "dependencies": {}
+}

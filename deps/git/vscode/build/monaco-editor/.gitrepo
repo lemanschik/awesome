@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/stealify/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/microsoft/monaco-editor
+	branch = main
+	commit = 584584e65bc6fb1c173c35415e81e365504829bd
+	parent = accab62184b76f68e1a0f7e3c37f58738810ff51
+	method = merge
+	cmdver = 0a31831

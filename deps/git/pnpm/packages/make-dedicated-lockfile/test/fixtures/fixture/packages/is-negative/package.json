@@ -1,0 +1,9 @@
+{
+  "name": "is-negative",
+  "version": "1.0.0",
+  "dependencies": {
+    "ramda": "0.26.0",
+    "request": "^2.0.0",
+    "is-positive": "workspace:^"
+  }
+}

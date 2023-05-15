@@ -1,0 +1,41 @@
+{
+  "name": "@pnpm/error",
+  "version": "5.0.0",
+  "description": "An error class for pnpm errors",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "!*.map"
+  ],
+  "engines": {
+    "node": ">=16.14"
+  },
+  "scripts": {
+    "lint": "eslint \"src/**/*.ts\"",
+    "test": "pnpm run compile",
+    "prepublishOnly": "pnpm run compile",
+    "compile": "tsc --build && pnpm run lint --fix"
+  },
+  "repository": "https://github.com/pnpm/pnpm/blob/main/packages/error",
+  "keywords": [
+    "pnpm8",
+    "pnpm",
+    "error"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pnpm/pnpm/issues"
+  },
+  "homepage": "https://github.com/pnpm/pnpm/blob/main/packages/error#readme",
+  "funding": "https://opencollective.com/pnpm",
+  "devDependencies": {
+    "@pnpm/error": "workspace:*"
+  },
+  "dependencies": {
+    "@pnpm/constants": "workspace:*"
+  },
+  "exports": {
+    ".": "./lib/index.js"
+  }
+}

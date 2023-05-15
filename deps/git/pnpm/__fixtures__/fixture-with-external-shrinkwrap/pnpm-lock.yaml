@@ -1,0 +1,16 @@
+lockfileVersion: '6.0'
+
+importers:
+
+  pkg:
+    dependencies:
+      is-positive:
+        specifier: 1.0.0
+        version: 1.0.0
+
+packages:
+
+  /is-positive@1.0.0:
+    resolution: {integrity: sha1-iACYVrZKLx632LsBeUGEJK4EUss=}
+    engines: {node: '>=0.10.0'}
+    dev: false

@@ -1,0 +1,25 @@
+# @pnpm/store-path
+
+## 8.0.0
+
+### Major Changes
+
+- eceaa8b8b: Node.js 14 support dropped.
+
+## 7.0.0
+
+### Major Changes
+
+- f884689e0: Require `@pnpm/logger` v5.
+
+## 6.0.0
+
+### Major Changes
+
+- cdeb65203: Changed the location of the global store from `~/.pnpm-store` to `<pnpm home directory>/store`
+
+  On Linux, by default it will be `~/.local/share/pnpm/store`
+  On Windows: `%LOCALAPPDATA%/pnpm/store`
+  On macOS: `~/Library/pnpm/store`
+
+  Related issue: [#2574](https://github.com/pnpm/pnpm/issues/2574)

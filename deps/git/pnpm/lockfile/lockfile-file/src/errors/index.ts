@@ -1,0 +1,1 @@
+export { LockfileBreakingChangeError } from './LockfileBreakingChangeError'

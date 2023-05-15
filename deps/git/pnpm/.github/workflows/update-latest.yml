@@ -1,0 +1,75 @@
+name: Tag
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version
+        required: true
+      tag:
+        description: Tag
+        default: latest
+        required: true
+
+permissions: {}
+jobs:
+  tag-in-registry:
+    name: Tagging ${{ github.event.inputs.version }} as ${{ github.event.inputs.tag }}
+    environment: release
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup Node
+      uses: actions/setup-node@v3
+    - name: Update tag
+      env:
+        "npm_config_//registry.npmjs.org/:_authToken": ${{ secrets.NPM_TOKEN }}
+      run: |
+        npm dist-tag add pnpm@${{ github.event.inputs.version }} latest-8
+        npm dist-tag add pnpm@${{ github.event.inputs.version }} ${{ github.event.inputs.tag }}
+        npm dist-tag add @pnpm/exe@${{ github.event.inputs.version }} latest-8
+        npm dist-tag add @pnpm/exe@${{ github.event.inputs.version }} ${{ github.event.inputs.tag }}
+
+  publish-to-winget:
+    runs-on: windows-latest # Action can only be run on windows
+    environment: release
+    needs: tag-in-registry
+    steps:
+      - uses: vedantmgoyal2009/winget-releaser@v2
+        with:
+          identifier: pnpm.pnpm
+          version: ${{ github.event.inputs.version }}
+          release-tag: v${{ github.event.inputs.version }}
+          token: ${{ secrets.WINGET_TOKEN }}
+
+  post-to-reddit:
+    runs-on: ubuntu-latest
+    environment: release
+    needs: tag-in-registry
+    steps:
+      - uses: bluwy/release-for-reddit-action@v1
+        with:
+          username: ${{ secrets.REDDIT_USERNAME }}
+          password: ${{ secrets.REDDIT_PASSWORD }}
+          app-id: ${{ secrets.REDDIT_APP_ID }}
+          app-secret: ${{ secrets.REDDIT_APP_SECRET }}
+          subreddit: pnpm
+          title: pnpm@${{ github.event.inputs.version }} is out!
+          url: https://github.com/pnpm/pnpm/releases/tag/v${{ github.event.inputs.version }}
+
+  post-to-mastodon:
+    runs-on: ubuntu-latest
+    environment: release
+    needs: tag-in-registry
+    steps:
+      - name: Send toot to Mastodon
+        id: mastodon
+        uses: cbrgm/mastodon-github-action@v1
+        with:
+          message: |
+            pnpm@${{ github.event.inputs.version }} is out!
+            https://github.com/pnpm/pnpm/releases/tag/v${{ github.event.inputs.version }}
+          visibility: "public"
+        env:
+          MASTODON_URL: "https://fosstodon.org/"
+          MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }} # access token
+

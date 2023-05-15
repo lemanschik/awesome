@@ -1,0 +1,32 @@
+{
+  "extends": "@pnpm/tsconfig",
+  "compilerOptions": {
+    "outDir": "lib",
+    "rootDir": "src"
+  },
+  "include": [
+    "src/**/*.ts",
+    "../../__typings__/**/*.d.ts"
+  ],
+  "references": [
+    {
+      "path": "../../network/fetch"
+    },
+    {
+      "path": "../../packages/types"
+    },
+    {
+      "path": "../../pkg-manager/client"
+    },
+    {
+      "path": "../../pkg-manager/package-requester"
+    },
+    {
+      "path": "../package-store"
+    },
+    {
+      "path": "../store-controller-types"
+    }
+  ],
+  "composite": true
+}

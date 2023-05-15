@@ -1,0 +1,24 @@
+{
+  "name": "@pnpm/prepare",
+  "version": "0.0.66",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "dependencies": {
+    "@pnpm/assert-project": "workspace:*",
+    "@pnpm/types": "workspace:*",
+    "unique-string": "^2.0.0",
+    "write-json5-file": "^3.1.0",
+    "write-pkg": "4.0.0",
+    "write-yaml-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "@pnpm/prepare": "workspace:*",
+    "@types/node": "^14.18.44"
+  },
+  "scripts": {
+    "lint": "eslint src/**/*.ts",
+    "prepublishOnly": "pnpm run compile",
+    "test": "pnpm run compile",
+    "compile": "rimraf tsconfig.tsbuildinfo lib && tsc --build"
+  }
+}

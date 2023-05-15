@@ -1,0 +1,8 @@
+{
+  "name": "has-bin",
+  "version": "0.0.0",
+  "bin": "exec",
+  "publishConfig": {
+    "executableFiles": ["./other-exec"]
+  }
+}

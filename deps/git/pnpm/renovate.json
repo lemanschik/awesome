@@ -1,0 +1,140 @@
+{
+  "extends": [
+    "config:base",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "ignoreDeps": [
+    "@pnpm/assert-project",
+    "@pnpm/build-modules",
+    "@pnpm/config",
+    "@pnpm/constants",
+    "@pnpm/core-loggers",
+    "@pnpm/default-fetcher",
+    "@pnpm/default-reporter",
+    "@pnpm/default-resolver",
+    "@pnpm/fetch",
+    "@pnpm/fetcher-base",
+    "@pnpm/filter-lockfile",
+    "@pnpm/git-fetcher",
+    "@pnpm/git-resolver",
+    "@pnpm/headless",
+    "@pnpm/lifecycle",
+    "@pnpm/list",
+    "@pnpm/local-resolver",
+    "@pnpm/lockfile-file",
+    "@pnpm/lockfile-types",
+    "@pnpm/lockfile-utils",
+    "@pnpm/logger",
+    "@pnpm/modules-cleaner",
+    "@pnpm/modules-yaml",
+    "@pnpm/npm-registry-agent",
+    "@pnpm/npm-resolver",
+    "@pnpm/outdated",
+    "@pnpm/package-is-installable",
+    "@pnpm/package-requester",
+    "@pnpm/package-store",
+    "@pnpm/pkgid-to-filename",
+    "@pnpm/prune-lockfile",
+    "@pnpm/read-projects-context",
+    "@pnpm/read-project-manifest",
+    "@pnpm/read-modules-dir",
+    "@pnpm/read-package-json",
+    "@pnpm/registry-mock",
+    "@pnpm/resolve-dependencies",
+    "@pnpm/resolver-base",
+    "@pnpm/server",
+    "@pnpm/hoist",
+    "@pnpm/store-controller-types",
+    "@pnpm/store-path",
+    "@pnpm/symlink-dependency",
+    "@pnpm/tarball-fetcher",
+    "@pnpm/tarball-resolver",
+    "@pnpm/types",
+    "@pnpm/utils",
+    "@pnpm/write-project-manifest",
+    "dependencies-hierarchy",
+    "@pnpm/dependency-path",
+    "fetch-from-npm-registry",
+    "find-packages",
+    "npm",
+    "pkgs-graph",
+    "publish-packed",
+    "remove-all-except-outer-links",
+    "@pnpm/core",
+    "ts-node",
+    "@types/ramda",
+    "@types/table"
+  ],
+  "ignorePaths": [
+    "fixtures",
+    "test/",
+    "packages/dependencies-hierarchy/fixtures",
+    "packages/dependencies-hierarchy/fixtureWithLinks",
+    "packages/dependencies-hierarchy/example",
+    "packages/list/test/",
+    "packages/list/example/"
+  ],
+  "packageRules": [
+    {
+      "packageNames": ["@types/ramda"],
+      "allowedVersions": "0.25.34"
+    },
+    {
+      "packageNames": ["agentkeepalive"],
+      "allowedVersions": "4.0.0"
+    },
+    {
+      "packageNames": ["graceful-fs"],
+      "allowedVersions": "4.2.1"
+    },
+    {
+      "packageNames": ["https-proxy-agent"],
+      "allowedVersions": "2.2.1"
+    },
+    {
+      "packageNames": ["uuid"],
+      "allowedVersions": "^3.4.0"
+    },
+    {
+      "packageNames": ["p-queue"],
+      "allowedVersions": "^6.6.2"
+    },
+    {
+      "packageNames": ["unique-string"],
+      "allowedVersions": "^2.0.0"
+    },
+    {
+      "packageNames": ["normalize-newline"],
+      "allowedVersions": "^3.0.0"
+    },
+    {
+      "packageNames": ["p-defer"],
+      "allowedVersions": "^3.0.0"
+    },
+    {
+      "packageNames": ["strip-ansi"],
+      "allowedVersions": "^6.0.0"
+    },
+    {
+      "packageNames": ["wrap-ansi"],
+      "allowedVersions": "^7.0.0"
+    },
+    {
+      "packageNames": ["escape-string-regexp"],
+      "allowedVersions": "^4.0.0"
+    },
+    {
+      "packageNames": ["sort-keys"],
+      "allowedVersions": "^4.2.0"
+    },
+    {
+      "packageNames": ["strip-bom"],
+      "allowedVersions": "^4.0.0"
+    }
+  ],
+  "pinVersions": false,
+  "schedule": [
+    "on Friday",
+    "every weekend"
+  ]
+}

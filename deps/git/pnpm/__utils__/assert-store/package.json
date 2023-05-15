@@ -1,0 +1,50 @@
+{
+  "name": "@pnpm/assert-store",
+  "description": "Utils for testing pnpm store",
+  "version": "1.0.59",
+  "author": {
+    "name": "Zoltan Kochan",
+    "email": "z@kochan.io",
+    "url": "https://www.kochan.io/"
+  },
+  "contributors": [
+    {
+      "name": "Tejasvi Nareddy",
+      "email": "tejunareddy@gmail.com",
+      "url": "https://www.tejunareddy.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/pnpm/pnpm/issues"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "homepage": "https://github.com/pnpm/pnpm/blob/master/privatePackages/assert-store#readme",
+  "keywords": [],
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "repository": "https://github.com/pnpm/pnpm/blob/master/privatePackages/assert-store",
+  "scripts": {
+    "compile": "tsc --build",
+    "lint": "eslint src/**/*.ts test/**/*.ts",
+    "prepublishOnly": "pnpm run compile",
+    "pretest": "pnpm install -C test/fixture/project --force --no-shared-workspace-lockfile",
+    "test": "pnpm pretest && pnpm run compile && jest"
+  },
+  "dependencies": {
+    "@pnpm/cafs": "workspace:*",
+    "@pnpm/registry-mock": "3.8.0",
+    "path-exists": "^4.0.0"
+  },
+  "devDependencies": {
+    "@pnpm/assert-store": "workspace:*"
+  }
+}

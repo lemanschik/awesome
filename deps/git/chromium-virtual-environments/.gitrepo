@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/stealify/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/lemanschik/chromium-virtual-environments
+	branch = main
+	commit = 97d0d8d123ae42c26f5231839a7f67a90020e4cf
+	parent = d6736dbbeebe879ccaae565e489ff5a3a611ec88
+	method = merge
+	cmdver = 0a31831

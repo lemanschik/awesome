@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/stealify/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/lemanschik/unpkg
+	branch = master
+	commit = 8f9c237c9e764b317bf3667f106ef6017973ac25
+	parent = 366ac1acc739b678edf40a12f42ff9684166a0de
+	method = merge
+	cmdver = 0a31831

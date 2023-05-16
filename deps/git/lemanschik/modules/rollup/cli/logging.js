@@ -1,0 +1,31 @@
+import process from 'node:process';
+import { bold, cyan, dim, red } from '../src/utils/colors';
+import relativeId from '../src/utils/relativeId';
+// log to stderr to keep `rollup main.js > bundle.js` from breaking
+export const stderr = (...parameters) => process.stderr.write(`${parameters.join('')}\n`);
+export function handleError(error, recover = false) {
+    const name = error.name || error.cause?.name;
+    const nameSection = name ? `${name}: ` : '';
+    const pluginSection = error.plugin ? `(plugin ${error.plugin}) ` : '';
+    const message = `${pluginSection}${nameSection}${error.message}`;
+    stderr(bold(red(`[!] ${bold(message.toString())}`)));
+    if (error.url) {
+        stderr(cyan(error.url));
+    }
+    if (error.loc) {
+        stderr(`${relativeId((error.loc.file || error.id))} (${error.loc.line}:${error.loc.column})`);
+    }
+    else if (error.id) {
+        stderr(relativeId(error.id));
+    }
+    if (error.frame) {
+        stderr(dim(error.frame));
+    }
+    if (error.stack) {
+        stderr(dim(error.stack));
+    }
+    stderr('');
+    // eslint-disable-next-line unicorn/no-process-exit
+    if (!recover)
+        process.exit(1);
+}

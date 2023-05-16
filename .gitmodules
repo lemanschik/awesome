@@ -1,3 +1,25 @@
 [submodule "github.com/lemanschik/experiments"]
 	path = github.com/lemanschik/experiments
 	url = git@github.com:lemanschik/experiments.git
+[submodule "packages/mpeg/deps/jsmpeg"]
+	path = packages/mpeg/deps/jsmpeg
+	url = git@github.com:phoboslab/jsmpeg.git
+[submodule "github.com/component-manager/cloud"]
+	path = github.com/component-manager/cloud
+	url = git@github.com:component-manager/cloud.git
+[submodule "github.com/lemanschik/awesome"]
+	path = github.com/lemanschik/awesome
+	url = git@github.com:lemanschik/awesome.git
+[submodule "github.com/unlicense-code/awesome"]
+	path = github.com/unlicense-code/awesome
+	url = git@github.com:unlicense-code/awesome.git
+[submodule "github.com/unlicense-code/awesome-b8g"]
+	path = github.com/unlicense-code/awesome-b8g
+	url = git@github.com:unlicense-code/awesome-b8g.git
+[submodule "git"]
+	path = git
+	url = git@github.com:lemanschik/git
+	branch = worktree
+[submodule "rollup"]
+	path = rollup
+	url = https://github.com/rollup/rollup

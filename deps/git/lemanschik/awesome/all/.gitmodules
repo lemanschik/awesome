@@ -1,3 +1,6 @@
+[submodule "github.com/lemanschik/experiments"]
+	path = github.com/lemanschik/experiments
+	url = git@github.com:lemanschik/experiments.git
 [submodule "packages/mpeg/deps/jsmpeg"]
 	path = packages/mpeg/deps/jsmpeg
 	url = git@github.com:phoboslab/jsmpeg.git

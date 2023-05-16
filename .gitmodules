@@ -1,3 +1,6 @@
+[submodule "packages/mpeg/deps/jsmpeg"]
+	path = packages/mpeg/deps/jsmpeg
+	url = git@github.com:phoboslab/jsmpeg.git
 [submodule "github.com/component-manager/cloud"]
 	path = github.com/component-manager/cloud
 	url = git@github.com:component-manager/cloud.git

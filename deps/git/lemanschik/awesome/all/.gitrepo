@@ -6,7 +6,7 @@
 [subrepo]
 	remote = https://github.com/lemanschik/awesome
 	branch = all
-	commit = 83bacf8b1a16e78a0f73eb75e99c65c8e1f17d34
-	parent = efaa7e403a478eb24b280e6245e2ae203fe27ec1
+	commit = 801ebc377f9aef59a9616a00e4a19524febca98b
+	parent = 2a636aa8b185e65198ccf688967ad31cbba4b74f
 	method = merge
 	cmdver = 0a31831

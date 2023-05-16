@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/stealify/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/aslushnikov/getting-started-with-cdp
+	branch = master
+	commit = a593667a62cc456f5a7fa46ead47468d8a5c292e
+	parent = 815f5eb5b962a0829babb76ff742847b87aba202
+	method = merge
+	cmdver = 0a31831

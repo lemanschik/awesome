@@ -1,4 +1,6 @@
-
+[submodule "github.com/component-manager/cloud"]
+	path = github.com/component-manager/cloud
+	url = git@github.com:component-manager/cloud.git
 [submodule "github.com/lemanschik/awesome"]
 	path = github.com/lemanschik/awesome
 	url = git@github.com:lemanschik/awesome.git
@@ -15,4 +17,3 @@
 [submodule "rollup"]
 	path = rollup
 	url = https://github.com/rollup/rollup
-

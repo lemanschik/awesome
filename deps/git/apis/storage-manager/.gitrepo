@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/stealify/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/lemanschik/storage-manager-api
+	branch = main
+	commit = 9ca550beda009762837c0463fe9e1aa15a818477
+	parent = d19a187a705eba5deafd58e22ff7f9d3cf0a3434
+	method = merge
+	cmdver = 0a31831

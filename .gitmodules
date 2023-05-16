@@ -2,3 +2,6 @@
 	path = git
 	url = git@github.com:lemanschik/git
 	branch = worktree
+[submodule "rollup"]
+	path = rollup
+	url = https://github.com/rollup/rollup

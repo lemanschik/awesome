@@ -1,6 +1,6 @@
 'use strict';
 
-const { HandshakeMachine } = require('../src/handshake');
+const { HandshakeMachine } = require('../datachannel.js');
 
 jest.mock('binary-data', () => ({
   decode: jest.fn(),

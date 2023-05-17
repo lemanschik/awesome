@@ -1,8 +1,8 @@
 'use strict';
 
 const { Readable, Writable, finished } = require('readable-stream');
-const { createChannel } = require('../src');
-const { channelType } = require('../src/constants');
+const { createChannel } = require('../datachannel.js');
+const { channelType } = require('../datachannel.js');
 
 test('ordered reliable channel', () => {
   const channel = createChannel({

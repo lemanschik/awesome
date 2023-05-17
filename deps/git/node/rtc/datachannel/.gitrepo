@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/stealify/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/nodertc/datachannel
+	branch = master
+	commit = d258092166adabc5f9b7c64cc457d0a1eb35041e
+	parent = 5dec6057812001c8f9a7305bc9cc281a5b03826c
+	method = merge
+	cmdver = 0a31831

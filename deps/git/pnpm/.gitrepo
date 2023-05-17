@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/stealify/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/pnpm/pnpm
+	branch = main
+	commit = cdb2a93ed2ead905217bada2ab0d273a71b4fa34
+	parent = e2dc5557766f91406af0bafc0768844aba51dac5
+	method = merge
+	cmdver = 0a31831

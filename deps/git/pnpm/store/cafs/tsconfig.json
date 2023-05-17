@@ -1,0 +1,29 @@
+{
+  "extends": "@pnpm/tsconfig",
+  "compilerOptions": {
+    "outDir": "lib",
+    "rootDir": "src"
+  },
+  "include": [
+    "src/**/*.ts",
+    "../../__typings__/**/*.d.ts"
+  ],
+  "references": [
+    {
+      "path": "../../fetching/fetcher-base"
+    },
+    {
+      "path": "../../fs/graceful-fs"
+    },
+    {
+      "path": "../../packages/types"
+    },
+    {
+      "path": "../cafs-types"
+    },
+    {
+      "path": "../store-controller-types"
+    }
+  ],
+  "composite": true
+}

@@ -1,0 +1,6 @@
+lockfileVersion: '6.0'
+
+dependencies:
+  example:
+    specifier: link:example
+    version: link:example

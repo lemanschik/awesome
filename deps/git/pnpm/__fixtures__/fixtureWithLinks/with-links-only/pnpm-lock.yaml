@@ -1,0 +1,6 @@
+lockfileVersion: '6.0'
+
+dependencies:
+  general:
+    specifier: 0.0.0
+    version: link:../general

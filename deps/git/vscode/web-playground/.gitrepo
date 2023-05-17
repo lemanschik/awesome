@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/stealify/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/microsoft/vscode-web-playground
+	branch = main
+	commit = fde7a272cc7de8267a3c3a53f07cda3038410272
+	parent = abfe120928814156737a73654400b7bedc7ba3fa
+	method = merge
+	cmdver = 0a31831

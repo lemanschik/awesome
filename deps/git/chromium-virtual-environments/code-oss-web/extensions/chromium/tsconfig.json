@@ -1,0 +1,23 @@
+{
+  "references": [
+   { "path": "../../../code-oss" }
+  ],
+  "compilerOptions": {
+    "declartion": false,
+    "composite": true,
+    "module": "amd",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"allowUnreachableCode": false,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+        "vs/*": [
+            "../../../code-oss/src/vs/*"
+        ]
+    },
+    "lib": ["ESNext"]
+}

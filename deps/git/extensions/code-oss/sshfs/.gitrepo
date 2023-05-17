@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/stealify/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/SchoofsKelvin/vscode-sshfs
+	branch = master
+	commit = 94ce9f8e65a37a38e6626de058472bdbc4d2c44d
+	parent = 2ff539a2521b7c5c5c3d8a4923882bec081f16ea
+	method = merge
+	cmdver = 0a31831

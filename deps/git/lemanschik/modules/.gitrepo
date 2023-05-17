@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/stealify/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/lemanschik/modules
+	branch = main
+	commit = 0c555f506d0c2812993a80da4baf43f773e422d2
+	parent = a2b2dd65ac84e3786ba44db498ae79f979eabe31
+	method = merge
+	cmdver = 0a31831

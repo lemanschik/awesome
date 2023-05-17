@@ -1,0 +1,8 @@
+#*.js linguist-detectable=false
+#*.ts linguist-detectable=false
+*.js linguist-language=Typescript
+*.stealify.md linguist-language=Html
+*.md linguist-detectable
+*.ts linguist-language=Typescript
+*.md linguist-language=Markdown
+* text eol=lf

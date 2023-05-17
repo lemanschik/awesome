@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/stealify/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/lemanschik/awesome
+	branch = all
+	commit = 801ebc377f9aef59a9616a00e4a19524febca98b
+	parent = 2a636aa8b185e65198ccf688967ad31cbba4b74f
+	method = merge
+	cmdver = 0a31831

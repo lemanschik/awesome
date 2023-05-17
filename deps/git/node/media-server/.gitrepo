@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/stealify/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/illuspas/Node-Media-Server
+	branch = master
+	commit = 720253c0c903811f80259b3a9c9b8745517b63f5
+	parent = d15c61490e05786a65b74b6fda2b9e41b29c1346
+	method = merge
+	cmdver = 0a31831

@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/stealify/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/nodertc/nodertc
+	branch = master
+	commit = a7bd7aca00bd389723f3cdc665653459667c408a
+	parent = 727a7572b6e10c18e34a3ba2e7e064af3073ba86
+	method = merge
+	cmdver = 0a31831

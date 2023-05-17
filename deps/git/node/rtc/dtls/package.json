@@ -1,0 +1,137 @@
+{
+  "name": "@nodertc/dtls",
+  "version": "0.6.0",
+  "description": "Secure UDP communications using DTLS.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "npm run lint && npm run unit-test",
+    "lint": "npx eslint --quiet .",
+    "unit-test": "npx jest",
+    "integrated-test": "node test/integrated/test.js",
+    "start": "DEBUG=dtls,dtls:* DEBUG_DEPTH=10 node example.js",
+    "gnutls-server": "docker run -it --name dtlsd --rm -e GNUTLS_DEBUG_LEVEL=2 -e PRIORITY=NORMAL:+AEAD:+ECDHE-RSA:+VERS-DTLS1.2 -e KEYFILE=key-rsa.pem -e CERTFILE=cert-rsa.pem -p 4444:4444/udp nodertc/dtls-server:1"
+  },
+  "keywords": [
+    "dtls",
+    "tls",
+    "secure",
+    "udp",
+    "dgram",
+    "webrtc",
+    "nodertc"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodertc/dtls.git"
+  },
+  "author": "Dmitriy Tsvettsikh <me@reklatsmasters.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodertc/dtls/issues"
+  },
+  "homepage": "https://github.com/nodertc/dtls#readme",
+  "engines": {
+    "node": ">=8.3"
+  },
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "@fidm/asn1": "^1.0.3",
+    "@fidm/x509": "^1.2.0",
+    "binary-data": "^0.6.0",
+    "buffer-xor": "^2.0.2",
+    "debug": "^4.1.0",
+    "is-chacha20-poly1305-supported": "^1.0.0",
+    "is-dtls": "^2.0.0",
+    "is-stream": "^1.1.0",
+    "ms": "^2.1.2",
+    "next-state": "^1.0.0",
+    "readable-stream": "^3.0.6",
+    "sorted-array-functions": "^1.2.0",
+    "streamfilter": "^3.0.0",
+    "timeout-refresh": "^1.0.0",
+    "unicast": "^1.2.0"
+  },
+  "devDependencies": {
+    "@nodertc/eslint-config": "^0.2.1",
+    "@types/node": "^12.6.2",
+    "eslint": "^5.16.0",
+    "jest": "^23.6.0",
+    "prettier": "^1.14.3"
+  },
+  "jest": {
+    "modulePaths": [
+      "<rootDir>",
+      "<rootDir>/src",
+      "<rootDir>/src/node_modules"
+    ],
+    "testMatch": [
+      "**/test/unit/**/*.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "coverageDirectory": "<rootDir>/coverage",
+    "collectCoverageFrom": [
+      "**/src/*.js",
+      "**/src/node_modules/**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "cacheDirectory": ".jest-cache",
+    "haste": {
+      "providesModuleNodeModules": [
+        "cipher",
+        "filter",
+        "fsm",
+        "lib",
+        "session",
+        "utils"
+      ]
+    }
+  },
+  "eslintConfig": {
+    "extends": "@nodertc",
+    "rules": {
+      "no-underscore-dangle": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "test/**/*.js"
+        ],
+        "env": {
+          "jest": true
+        },
+        "settings": {
+          "import/resolver": {
+            "node": {
+              "moduleDirectory": [
+                "node_modules",
+                "src",
+                "src/node_modules"
+              ]
+            }
+          }
+        },
+        "rules": {
+          "require-jsdoc": "off",
+          "security/detect-non-literal-fs-filename": "off",
+          "no-process-exit": "off",
+          "unicorn/no-process-exit": "off"
+        }
+      },
+      {
+        "files": [
+          "example.js"
+        ],
+        "rules": {
+          "no-console": "off",
+          "security/detect-non-literal-fs-filename": "off"
+        }
+      }
+    ]
+  }
+}
